@@ -1,50 +1,47 @@
-= Teleco
+= Mini POS
 
-== Overview
-adalah sebuah service yang berfungsi sebagai switching dari partner ke telco issuer
-{detil informasi akan di update lagi}
-
-== Team Involved
+== Software yang harus terinstal di komputer
 |===
-| *Name* | *Role* | *Email* 
-| Herman Sutanto | Development Manager | herman@alterra.id
-| Bahtiar Indra Ariyanki | Software Engineer | bahtiar@alterra.id
-| Ikromy Muddhar | Software Engineer | ikromy@alterra.id
-| Hendrik | Software Engineer | hendrik@alterra.id
+| *Software* | *Versi*
+| Golang | 1.15+
+| MariaDB | 10.3+
+|===
+
+
+== Cara Menjalakan
+ 1. Clone repo ini
+ 2. Buat database dengan nama `minipos`
+ 3. Copy file `config_example.json` ke `config.json`
+ 4. Buka file `config.json` lalu edit, sesuaikan dengan configurasi di komputer
+ 5. Jalankan DB Migration untuk setup table dan `preload` data yang diperlukan, `go run app/migration/mysql/main.go up`
+ 4. Untuk menjalankan service, `go run app/api/intl/main.go`
+
+== Preload Data User
+|===
+| *Email* | *Role* | *Password* 
+| a@a.id | admin | admin
+|===
+
+== Preload Data Merchant
+|===
+| *ID* | *Nama*
+| 888 | INDOMART
+| 999 | ALFAMART
+|===
+
+== Preload Data Outlet
+|===
+| *ID* | *Nama* | *Merchant*
+| 888001 | INDOMART PAKIS | INDOMART
+| 999001 | ALFAMART TUMPANG | ALFAMART
 |===
 
 == Technical Information
 
-<<docs/url-teleco.adoc#, System URL Teleco>>
+<<docs/url-teleco.adoc#, ERD>>
 
-<<docs/architecture-teleco.adoc#, Architecture Teleco>>
+<<docs/architecture-teleco.adoc#, DML>>
 
-<<docs/technology-teleco.adoc#, Technology Teleco>>
+<<docs/technology-teleco.adoc#, Activity Diagram>>
 
-<<docs/environment-teleco.adoc#, Environment Teleco>>
-
-<<docs/database-teleco.adoc#, Database Documentation Teleco>>
-
-<<docs/release-deploy-teleco.adoc#, Release and Deployment Teleco>>
-
-<<docs/flow-wire-teleco.adoc#, Flow and Wireframe Teleco>>
-
-== Onboarding Information
-
-<<docs/dev-onboarding-teleco.adoc#, Developer Onboarding Teleco>>
-
-<<docs/development-teleco.adoc#, Development Teleco>>
-
-<<docs/naming-convention-teleco.adoc#, Naming Convention Teleco>>
-
-== Documentation
-
-User Guide (jika ada, external link)
-
-Dokumen Integrasi (jika ada, external link)
-
-Dokumen Maintenance (jika ada, external link)
-
-Dokumen API (jika ada, external link)
-
-<<docs/release-note-teleco.adoc#, Release Note Teleco>>
+<<docs/environment-teleco.adoc#, Use Case Diagram>>
