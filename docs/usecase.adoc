@@ -1,3 +1,3 @@
 = USE CASE DIAGRAM
 
-image::usecase.png[Minipos Use Case Diagram]
+image::USECASE.png[Minipos Use Case Diagram]
