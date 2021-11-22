@@ -1,3 +1,9 @@
-= ERD
+= DML
 
-image::ERD.png[Minipos ERD]
+== Authentication
+
+=== Get user email
+`select * from user`
+
+=== Insert user token
+`select * from user`
