@@ -1,0 +1,26 @@
+{
+	"port": "7777",
+	"jwt": {
+		"sign_key": "jwt-sign-key",
+		"expired_in_hour": 24
+	},
+	"database": {
+		"mysql": {
+			"driver": "mysql",
+			"host": "localhost",
+			"user": "root",
+			"password": "",
+			"db_name": "teleco",
+			"port": 3306,
+			"pool": {
+				"maxOpenConns": 100,
+				"maxIdleConns": 10,
+				"maxLifetime": 300
+			}
+		}
+	},
+	"logdir": "log",
+	"log_identifier": "teleco",
+	"log_max_age": 15,
+	"debug": true
+}

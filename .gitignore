@@ -1,0 +1,21 @@
+.DS_Store
+/.vscode
+/.idea
+/gin-bin
+/vendor
+/config.json
+/config_dev.json
+/config_test.json
+/.scannerwork/
+/coverage.out
+/report.json
+/log/access_log*
+/log/app_log*
+/portadapter
+/app/api/intl/docs
+/app/api/extl/docs
+Dockerfile
+kubestaging*
+
+# For Development Testing Only
+test.go

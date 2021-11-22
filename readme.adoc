@@ -1,0 +1,50 @@
+= Teleco
+
+== Overview
+adalah sebuah service yang berfungsi sebagai switching dari partner ke telco issuer
+{detil informasi akan di update lagi}
+
+== Team Involved
+|===
+| *Name* | *Role* | *Email* 
+| Herman Sutanto | Development Manager | herman@alterra.id
+| Bahtiar Indra Ariyanki | Software Engineer | bahtiar@alterra.id
+| Ikromy Muddhar | Software Engineer | ikromy@alterra.id
+| Hendrik | Software Engineer | hendrik@alterra.id
+|===
+
+== Technical Information
+
+<<docs/url-teleco.adoc#, System URL Teleco>>
+
+<<docs/architecture-teleco.adoc#, Architecture Teleco>>
+
+<<docs/technology-teleco.adoc#, Technology Teleco>>
+
+<<docs/environment-teleco.adoc#, Environment Teleco>>
+
+<<docs/database-teleco.adoc#, Database Documentation Teleco>>
+
+<<docs/release-deploy-teleco.adoc#, Release and Deployment Teleco>>
+
+<<docs/flow-wire-teleco.adoc#, Flow and Wireframe Teleco>>
+
+== Onboarding Information
+
+<<docs/dev-onboarding-teleco.adoc#, Developer Onboarding Teleco>>
+
+<<docs/development-teleco.adoc#, Development Teleco>>
+
+<<docs/naming-convention-teleco.adoc#, Naming Convention Teleco>>
+
+== Documentation
+
+User Guide (jika ada, external link)
+
+Dokumen Integrasi (jika ada, external link)
+
+Dokumen Maintenance (jika ada, external link)
+
+Dokumen API (jika ada, external link)
+
+<<docs/release-note-teleco.adoc#, Release Note Teleco>>
