@@ -18,7 +18,7 @@
 
 == Preload Data User
 |===
-| *Email* | *Role* | *Password* 
+| *Email* | *Role* | *Password*
 | a@a.id | admin | admin
 |===
 
@@ -38,7 +38,7 @@
 
 == Technical Information
 
-<<docs/url-teleco.adoc#, ERD>>
+<<docs/erd.adoc#, ERD>>
 
 <<docs/architecture-teleco.adoc#, DML>>
 
