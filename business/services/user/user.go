@@ -100,6 +100,7 @@ func (s *service) Update(user *port.User) error {
 	data.Email = user.Email
 	data.Role = user.Role
 	data.MerchantID = user.MerchantID
+	data.Password = existingUser.Password
 	data.OutletID = user.OutletID
 	data.CreatedAt = existingUser.CreatedAt
 
