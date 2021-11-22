@@ -1,0 +1,5 @@
+= ACTIVITY DIAGRAM
+== Authentication
+1. <<ad_user_login.adoc#, User Login>>
+2. <<ad_user_login.adoc#, User Logout>>
+3. <<ad_user_login.adoc#, Auth Middleware>>

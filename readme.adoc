@@ -14,7 +14,7 @@
  3. Copy file `config_example.json` ke `config.json`
  4. Buka file `config.json` lalu edit, sesuaikan dengan configurasi di komputer
  5. Jalankan DB Migration untuk setup table dan `preload` data yang diperlukan, `go run app/migration/mysql/main.go up`
- 4. Untuk menjalankan service, `go run app/api/intl/main.go`
+ 6. Untuk menjalankan service, `go run app/api/intl/main.go`
 
 == Preload Data User
 |===
@@ -40,8 +40,8 @@
 
 <<docs/erd.adoc#, ERD>>
 
-<<docs/architecture-teleco.adoc#, DML>>
+<<docs/dml.adoc#, DML>>
 
-<<docs/technology-teleco.adoc#, Activity Diagram>>
+<<docs/ad.adoc#, Activity Diagram>>
 
-<<docs/environment-teleco.adoc#, Use Case Diagram>>
+<<docs/usecase.adoc#, Use Case Diagram>>

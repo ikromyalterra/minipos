@@ -1,0 +1,3 @@
+= USER LOGIN - ACTIVITY DIAGRAM
+
+image::ad_user_login.png[Minipos AD User Login]
