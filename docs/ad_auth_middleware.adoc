@@ -1,0 +1,3 @@
+= AUTH MIDDLEWARE - ACTIVITY DIAGRAM
+
+image::images/AD_AUTH_MIDDLEWARE.png[Minipos AD Auth Middleware]

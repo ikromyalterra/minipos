@@ -2,5 +2,5 @@
 == Authentication
 
 1. <<ad_user_login.adoc#, User Login>>
-2. <<ad_user_login.adoc#, User Logout>>
-3. <<ad_user_login.adoc#, Auth Middleware>>
+2. <<ad_user_auth_middleware.adoc#, Auth Middleware>>
+3. <<ad_user_logout.adoc#, User Logout>>

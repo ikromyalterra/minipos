@@ -1,0 +1,3 @@
+= USER LOGOUT - ACTIVITY DIAGRAM
+
+image::images/AD_USER_LOGOUT.png[Minipos AD User Logout]
