@@ -120,3 +120,20 @@ SELECT product_outlet.*, product.sku as sku, product.image as image, product.nam
 ```
 SELECT product_outlet.*, product.sku as sku, product.image as image, product.name as product, merchant.id as id_merchant, merchant.name as merchant, outlet.name as outlet FROM `product_outlet` join product on product_outlet.id_product = product.id join outlet on product_outlet.id_outlet = outlet.id join merchant on product.id_merchant = merchant.id
 ```
+
+== User Token
+
+=== Create
+```
+INSERT INTO `user_token` (`id_token`,`id_user`,`created_at`,`updated_at`) VALUES (4235163917,555,'2021-11-23 07:20:03','2021-11-23 07:20:03')
+```
+
+=== Delete By Token ID (while logout)
+```
+DELETE FROM `user_token`  WHERE (id_token = 4235163917)
+```
+
+=== Delete By User ID (while user credential/role changed)
+```
+DELETE FROM `user_token`  WHERE (id_user = 555)
+```
