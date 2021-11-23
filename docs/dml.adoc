@@ -3,78 +3,120 @@
 == User
 
 === Get user email (used for login)
-`SELECT * FROM `user`  WHERE (email = 'a@a.id')`
+```
+SELECT * FROM `user`  WHERE (email = 'a@a.id')
+```
 
 === Create
 > user admin
 
-`INSERT INTO `user` (`email`,`password`,`role`,`created_at`,`updated_at`) VALUES ('b@b.id','$2a$08$L6gXyrMaEiTYRWh.7lwrwOUAq3mKTC5g1gN5zsMp2.UOqgLOwUJEK','admin','2021-11-23 06:43:36','2021-11-23 06:43:36')`
+```
+INSERT INTO `user` (`email`,`password`,`role`,`created_at`,`updated_at`) VALUES ('b@b.id','$2a$08$L6gXyrMaEiTYRWh.7lwrwOUAq3mKTC5g1gN5zsMp2.UOqgLOwUJEK','admin','2021-11-23 06:43:36','2021-11-23 06:43:36')
+```
 
 > user merchant
 
-`INSERT INTO `user` (`email`,`password`,`role`,`id_merchant`,`created_at`,`updated_at`) VALUES ('m@m.id','$2a$08$FTRjbVdRt0vObVoNzFT96.yJtkMboya.nWQ8fmBEGhsjTbGsgEjw6','merchant',888,'2021-11-23 06:46:27','2021-11-23 06:46:27')`
+```
+INSERT INTO `user` (`email`,`password`,`role`,`id_merchant`,`created_at`,`updated_at`) VALUES ('m@m.id','$2a$08$FTRjbVdRt0vObVoNzFT96.yJtkMboya.nWQ8fmBEGhsjTbGsgEjw6','merchant',888,'2021-11-23 06:46:27','2021-11-23 06:46:27')
+```
 
 > user outlet
 
-`INSERT INTO `user` (`email`,`password`,`role`,`id_outlet`,`created_at`,`updated_at`) VALUES ('m001@m.id','$2a$08$td/4mGZLWrw5qrrUtc/LROvxH4btxm2wkNbK94IlYIYghDd/OOyDC','outlet',888001,'2021-11-23 06:47:34','2021-11-23 06:47:34')`
+```
+INSERT INTO `user` (`email`,`password`,`role`,`id_outlet`,`created_at`,`updated_at`) VALUES ('m001@m.id','$2a$08$td/4mGZLWrw5qrrUtc/LROvxH4btxm2wkNbK94IlYIYghDd/OOyDC','outlet',888001,'2021-11-23 06:47:34','2021-11-23 06:47:34')
+```
 
 === Read
-`SELECT user.id, user.email, user.password, user.role, IFNULL(user.id_merchant, mo.id) as id_merchant, user.id_outlet, user.created_at, user.updated_at, IFNULL(merchant.name, mo.name) as merchant, outlet.name as outlet FROM `user` left join merchant on user.id_merchant = merchant.id left join outlet on user.id_outlet = outlet.id left join merchant as mo on outlet.id_merchant = mo.id WHERE (user.id = 555)`
+```
+SELECT user.id, user.email, user.password, user.role, IFNULL(user.id_merchant, mo.id) as id_merchant, user.id_outlet, user.created_at, user.updated_at, IFNULL(merchant.name, mo.name) as merchant, outlet.name as outlet FROM `user` left join merchant on user.id_merchant = merchant.id left join outlet on user.id_outlet = outlet.id left join merchant as mo on outlet.id_merchant = mo.id WHERE (user.id = 555)
+```
 
 === Update
-`UPDATE `user` SET `email` = 'a@a.id', `id_merchant` = NULL, `id_outlet` = NULL, `password` = '$2a$08$cwJLLr.LfnKjUdpW6C3kE.KnEhdcQiVXGXcMd3iAXJ9IgMgLDnOci', `role` = 'admin', `updated_at` = '2021-11-23 06:52:21'  WHERE `user`.`id` = 555`
+```
+UPDATE `user` SET `email` = 'a@a.id', `id_merchant` = NULL, `id_outlet` = NULL, `password` = '$2a$08$cwJLLr.LfnKjUdpW6C3kE.KnEhdcQiVXGXcMd3iAXJ9IgMgLDnOci', `role` = 'admin', `updated_at` = '2021-11-23 06:52:21'  WHERE `user`.`id` = 555
+```
 
 === Delete
-`DELETE FROM `user`  WHERE (id = 558)`
+```
+DELETE FROM `user`  WHERE (id = 558)
+```
 
 === List
-`SELECT user.id, user.email, user.password, user.role, IFNULL(user.id_merchant, mo.id) as id_merchant, user.id_outlet, user.created_at, user.updated_at, IFNULL(merchant.name, mo.name) as merchant, outlet.name as outlet FROM `user` left join merchant on user.id_merchant = merchant.id left join outlet on user.id_outlet = outlet.id left join merchant as mo on outlet.id_merchant = mo.id`
+```
+SELECT user.id, user.email, user.password, user.role, IFNULL(user.id_merchant, mo.id) as id_merchant, user.id_outlet, user.created_at, user.updated_at, IFNULL(merchant.name, mo.name) as merchant, outlet.name as outlet FROM `user` left join merchant on user.id_merchant = merchant.id left join outlet on user.id_outlet = outlet.id left join merchant as mo on outlet.id_merchant = mo.id
+```
 
 == Product
 
 === Create
-`INSERT INTO `product` (`id_merchant`,`sku`,`name`,`image`,`price`,`created_at`,`updated_at`) VALUES (888,'MLD00001','Rokok MLD 20 Filter','',30000,'2021-11-23 06:56:22','2021-11-23 06:56:22')`
+```
+INSERT INTO `product` (`id_merchant`,`sku`,`name`,`image`,`price`,`created_at`,`updated_at`) VALUES (888,'MLD00001','Rokok MLD 20 Filter','',30000,'2021-11-23 06:56:22','2021-11-23 06:56:22')
+```
 
 === Read
-`SELECT product.*, merchant.name as merchant FROM `product` join merchant on product.id_merchant = merchant.id WHERE (product.id = 1)`
+```
+SELECT product.*, merchant.name as merchant FROM `product` join merchant on product.id_merchant = merchant.id WHERE (product.id = 1)
+```
 
 === Update
-`UPDATE `product` SET `id_merchant` = 888, `image` = '', `name` = 'Rokok MLD 20 Filter', `price` = 29000, `sku` = 'MLD00001', `updated_at` = '2021-11-23 06:58:54'  WHERE `product`.`id` = 1`
+```
+UPDATE `product` SET `id_merchant` = 888, `image` = '', `name` = 'Rokok MLD 20 Filter', `price` = 29000, `sku` = 'MLD00001', `updated_at` = '2021-11-23 06:58:54'  WHERE `product`.`id` = 1
+```
 
 === Delete
-`DELETE FROM `product`  WHERE (id = 2)`
+```
+DELETE FROM `product`  WHERE (id = 2)
+```
 
 === List
 > with filter id_merchant
 
-`SELECT product.*, merchant.name as merchant FROM `product` join merchant on product.id_merchant = merchant.id WHERE (product.id_merchant = 888)`
+```
+SELECT product.*, merchant.name as merchant FROM `product` join merchant on product.id_merchant = merchant.id WHERE (product.id_merchant = 888)
+```
 
 > without filter id_merchant
 
-`SELECT product.*, merchant.name as merchant FROM `product` join merchant on product.id_merchant = merchant.id`
+```
+SELECT product.*, merchant.name as merchant FROM `product` join merchant on product.id_merchant = merchant.id
+```
 
 === Get Product By SKU and Merchant ID (check duplicate SKU)
-`SELECT * FROM `product`  WHERE (id_merchant = 888 AND sku = 'MLD00001')`
+```
+SELECT * FROM `product`  WHERE (id_merchant = 888 AND sku = 'MLD00001')
+```
 
 == Product Outlet
 
 === Create
-`INSERT INTO `product_outlet` (`id_product`,`id_outlet`,`price`,`created_at`,`updated_at`) VALUES (1,888001,35000,'2021-11-23 07:05:53','2021-11-23 07:05:53')`
+```
+INSERT INTO `product_outlet` (`id_product`,`id_outlet`,`price`,`created_at`,`updated_at`) VALUES (1,888001,35000,'2021-11-23 07:05:53','2021-11-23 07:05:53')
+```
 
 === Read
-`SELECT product_outlet.*, product.sku as sku, product.image as image,product.name as product, merchant.id as id_merchant, merchant.name as merchant, outlet.name as outlet FROM `product_outlet` join product on product_outlet.id_product = product.id join outlet on product_outlet.id_outlet = outlet.id join merchant on product.id_merchant = merchant.id WHERE (product_outlet.id = 1)`
+```
+SELECT product_outlet.*, product.sku as sku, product.image as image,product.name as product, merchant.id as id_merchant, merchant.name as merchant, outlet.name as outlet FROM `product_outlet` join product on product_outlet.id_product = product.id join outlet on product_outlet.id_outlet = outlet.id join merchant on product.id_merchant = merchant.id WHERE (product_outlet.id = 1)
+```
 
 === Update
-`UPDATE `product_outlet` SET `id_outlet` = 888001, `id_product` = 1, `price` = 32000, `updated_at` = '2021-11-23 07:07:24'  WHERE `product_outlet`.`id` = 1`
+```
+UPDATE `product_outlet` SET `id_outlet` = 888001, `id_product` = 1, `price` = 32000, `updated_at` = '2021-11-23 07:07:24'  WHERE `product_outlet`.`id` = 1
+```
 
 === Delete
-`DELETE FROM `product_outlet`  WHERE (id = 1)`
+```
+DELETE FROM `product_outlet`  WHERE (id = 1)
+```
 
 === List
 > with filter id_outlet
 
-`SELECT product_outlet.*, product.sku as sku, product.image as image, product.name as product, merchant.id as id_merchant, merchant.name as merchant, outlet.name as outlet FROM `product_outlet` join product on product_outlet.id_product = product.id join outlet on product_outlet.id_outlet = outlet.id join merchant on product.id_merchant = merchant.id WHERE (product_outlet.id_outlet = 888001)`
+```
+SELECT product_outlet.*, product.sku as sku, product.image as image, product.name as product, merchant.id as id_merchant, merchant.name as merchant, outlet.name as outlet FROM `product_outlet` join product on product_outlet.id_product = product.id join outlet on product_outlet.id_outlet = outlet.id join merchant on product.id_merchant = merchant.id WHERE (product_outlet.id_outlet = 888001)
+```
 
 > without filter id_outlet
 
-`SELECT product_outlet.*, product.sku as sku, product.image as image, product.name as product, merchant.id as id_merchant, merchant.name as merchant, outlet.name as outlet FROM `product_outlet` join product on product_outlet.id_product = product.id join outlet on product_outlet.id_outlet = outlet.id join merchant on product.id_merchant = merchant.id`
+```
+SELECT product_outlet.*, product.sku as sku, product.image as image, product.name as product, merchant.id as id_merchant, merchant.name as merchant, outlet.name as outlet FROM `product_outlet` join product on product_outlet.id_product = product.id join outlet on product_outlet.id_outlet = outlet.id join merchant on product.id_merchant = merchant.id
+```
