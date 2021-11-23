@@ -123,7 +123,7 @@ SELECT product_outlet.*, product.sku as sku, product.image as image, product.nam
 
 == User Token
 
-=== Create
+=== Create (while login)
 ```
 INSERT INTO `user_token` (`id_token`,`id_user`,`created_at`,`updated_at`) VALUES (4235163917,555,'2021-11-23 07:20:03','2021-11-23 07:20:03')
 ```
